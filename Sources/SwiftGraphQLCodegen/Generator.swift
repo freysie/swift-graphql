@@ -53,7 +53,7 @@ public struct GraphQLCodegen {
         let code = """
         // This file was auto-generated using maticzav/swift-graphql. DO NOT EDIT MANUALLY!
         import Foundation
-        import GraphQL
+        import GraphQLClient
         import SwiftGraphQL
 
         // MARK: - Operations

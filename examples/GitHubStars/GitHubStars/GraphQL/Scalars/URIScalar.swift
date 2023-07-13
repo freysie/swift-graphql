@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 import SwiftGraphQL
 
 // https://docs.github.com/en/graphql/reference/scalars#base64string

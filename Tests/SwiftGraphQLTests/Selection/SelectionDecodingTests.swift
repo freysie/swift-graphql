@@ -1,4 +1,4 @@
-import GraphQL
+import GraphQLClient
 @testable import SwiftGraphQL
 import XCTest
 

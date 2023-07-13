@@ -1,4 +1,4 @@
-import GraphQL
+import GraphQLClient
 import XCTest
 
 /// A suite of tests that check all edge cases of the response format as described in [GraphQL Spec Response Format](http://spec.graphql.org/October2021/#sec-Response-Format) section.
@@ -23,16 +23,16 @@ final class ExecutionTests: XCTestCase {
             ExecutionResult(
                 data: AnyCodable("Hello World!"),
                 errors: [
-                    GraphQL.GraphQLError(
+                    GraphQLClient.GraphQLError(
                         message: "Message.",
                         locations: [
-                            GraphQL.GraphQLError.Location(line: 6, column: 7)
+                            GraphQLClient.GraphQLError.Location(line: 6, column: 7)
                         ],
                         path: [
-                            GraphQL.GraphQLError.PathLink.path("hero"),
-                            GraphQL.GraphQLError.PathLink.path("heroFriends"),
-                            GraphQL.GraphQLError.PathLink.index(1),
-                            GraphQL.GraphQLError.PathLink.path("name")
+                            GraphQLClient.GraphQLError.PathLink.path("hero"),
+                            GraphQLClient.GraphQLError.PathLink.path("heroFriends"),
+                            GraphQLClient.GraphQLError.PathLink.index(1),
+                            GraphQLClient.GraphQLError.PathLink.path("name")
                         ],
                         extensions: nil
                     )
@@ -58,19 +58,19 @@ final class ExecutionTests: XCTestCase {
         
         XCTAssertEqual(
             result,
-            GraphQL.ExecutionResult(
+            GraphQLClient.ExecutionResult(
                 data: nil,
                 errors: [
-                    GraphQL.GraphQLError(
+                    GraphQLClient.GraphQLError(
                         message: "Message.",
                         locations: [
-                            GraphQL.GraphQLError.Location(line: 6, column: 7)
+                            GraphQLClient.GraphQLError.Location(line: 6, column: 7)
                         ],
                         path: [
-                            GraphQL.GraphQLError.PathLink.path("hero"),
-                            GraphQL.GraphQLError.PathLink.path("heroFriends"),
-                            GraphQL.GraphQLError.PathLink.index(1),
-                            GraphQL.GraphQLError.PathLink.path("name")
+                            GraphQLClient.GraphQLError.PathLink.path("hero"),
+                            GraphQLClient.GraphQLError.PathLink.path("heroFriends"),
+                            GraphQLClient.GraphQLError.PathLink.index(1),
+                            GraphQLClient.GraphQLError.PathLink.path("name")
                         ],
                         extensions: nil
                     )
@@ -90,7 +90,7 @@ final class ExecutionTests: XCTestCase {
         
         XCTAssertEqual(
             result,
-            GraphQL.ExecutionResult(
+            GraphQLClient.ExecutionResult(
                 data: AnyCodable("Hello World!"),
                 errors: nil,
                 hasNext: nil,
@@ -116,10 +116,10 @@ final class ExecutionTests: XCTestCase {
         
         XCTAssertEqual(
             result,
-            GraphQL.ExecutionResult(
+            GraphQLClient.ExecutionResult(
                 data: nil,
                 errors: [
-                    GraphQL.GraphQLError(
+                    GraphQLClient.GraphQLError(
                         message: "Bad Request Exception",
                         locations: nil,
                         path: nil,

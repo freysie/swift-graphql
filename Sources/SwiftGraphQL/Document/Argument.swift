@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 
 /**
  Argument represents a single variable in the GraphQL query.

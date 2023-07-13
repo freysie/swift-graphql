@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 
 // MARK: - Selection Transformation
 

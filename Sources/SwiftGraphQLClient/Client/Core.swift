@@ -1,6 +1,6 @@
 import Combine
 import Foundation
-import GraphQL
+import GraphQLClient
 import Logging
 
 /// A built-in implementation of the GraphQLClient specification that may be used with the library.

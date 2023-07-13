@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 
 /// Fields is a class that selection passes around to collect information about the selection
 /// of a query and also aids the decoding process.

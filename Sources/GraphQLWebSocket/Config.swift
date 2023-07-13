@@ -1,4 +1,4 @@
-import GraphQL
+import GraphQLClient
 import Foundation
 
 import Logging

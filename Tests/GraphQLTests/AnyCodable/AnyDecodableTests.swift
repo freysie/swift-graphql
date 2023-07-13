@@ -1,6 +1,6 @@
 // This file is taken from https://github.com/Flight-School/AnyCodable.
 
-@testable import GraphQL
+@testable import GraphQLClient
 import XCTest
 
 class AnyDecodableTests: XCTestCase {

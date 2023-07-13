@@ -1,5 +1,5 @@
 import Combine
-import GraphQL
+import GraphQLClient
 @testable import GraphQLWebSocket
 import XCTest
 

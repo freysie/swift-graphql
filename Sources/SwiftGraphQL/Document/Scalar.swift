@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 
 /// Protocol that a custom scalar should implement to be used with SwiftGraphQL.
 public protocol GraphQLScalar: Encodable {

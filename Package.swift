@@ -18,8 +18,8 @@ let package = Package(
         // CLI
         .executable( name: "swift-graphql", targets: ["SwiftGraphQLCLI"]),
         // Utilities
-        .library(name: "GraphQL", targets: ["GraphQL"]),
         .library(name: "GraphQLAST", targets: ["GraphQLAST"]),
+        .library(name: "GraphQLClient", targets: ["GraphQLClient"]),
         .library(name: "GraphQLWebSocket", targets: ["GraphQLWebSocket"])
     ],
     dependencies: [
@@ -34,12 +34,12 @@ let package = Package(
     ],
     targets: [
         // Spec
-        .target(name: "GraphQL", dependencies: [], path: "Sources/GraphQL"),
         .target(name: "GraphQLAST", dependencies: [], path: "Sources/GraphQLAST"),
+        .target(name: "GraphQLClient", dependencies: [], path: "Sources/GraphQLClient"),
         .target(
             name: "GraphQLWebSocket",
             dependencies: [
-                "GraphQL",
+                "GraphQLClient",
                 .product(name: "Logging", package: "swift-log"),
                 "Starscream"
             ],
@@ -51,13 +51,13 @@ let package = Package(
         
         .target(
             name: "SwiftGraphQL",
-            dependencies: ["GraphQL", "SwiftGraphQLUtils"],
+            dependencies: ["GraphQLClient", "SwiftGraphQLUtils"],
             path: "Sources/SwiftGraphQL"
         ),
         .target(
             name: "SwiftGraphQLClient",
             dependencies: [
-                "GraphQL",
+                "GraphQLClient",
                 "GraphQLWebSocket",
                 .product(name: "Logging", package: "swift-log"),
                 "SwiftGraphQL",
@@ -96,8 +96,8 @@ let package = Package(
             name: "SwiftGraphQLTests",
             dependencies: [
                 "Files",
-                "GraphQL",
                 "GraphQLAST",
+                "GraphQLClient",
                 "GraphQLWebSocket",
                 "SwiftGraphQLCodegen",
                 "SwiftGraphQL",

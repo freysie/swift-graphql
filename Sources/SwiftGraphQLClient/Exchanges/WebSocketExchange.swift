@@ -1,6 +1,6 @@
 import Combine
 import Foundation
-import GraphQL
+import GraphQLClient
 
 #if canImport(GraphQLWebSocket)
 import GraphQLWebSocket

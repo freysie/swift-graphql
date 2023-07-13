@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 import SwiftGraphQL
 
 extension Date: GraphQLScalar {

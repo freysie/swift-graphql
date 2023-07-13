@@ -1,5 +1,5 @@
 import Foundation
-import GraphQL
+import GraphQLClient
 
 /// Tells whether a concreate type has a value.
 ///

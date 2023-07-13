@@ -1,6 +1,6 @@
 import Combine
 import Foundation
-import GraphQL
+import GraphQLClient
 
 /// Exchange that logs operations going down- and results going up-stream.
 ///

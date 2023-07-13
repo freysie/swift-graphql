@@ -1,6 +1,6 @@
 import Combine
 import Foundation
-import GraphQL
+import GraphQLClient
 
 /// Exchange that lets you modify `extensions` property of the operation.
 ///
